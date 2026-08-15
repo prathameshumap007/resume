@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prathamesh Umap — Front-End & Mobile Developer</title>
+<meta name="description" content="Prathamesh Umap — Front-End & Mobile Developer specialising in secure UK fintech banking apps built with Angular, Ionic and Capacitor.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__mark" aria-label="Home">
+      <span class="nav__mark-box">PU</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#summary">Summary</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn--ghost nav__cta" href="assets/Prathamesh_Umap_Resume.pdf" download>
+      <span>Download CV</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" id="navMobile">
+    <a href="#summary">Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+    <a href="assets/Prathamesh_Umap_Resume.pdf" download>Download CV</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>Available for new opportunities</p>
+      <h1 class="hero__title">
+        Building banking apps<br>
+        people trust <span class="hl">with a tap.</span>
+      </h1>
+      <p class="hero__sub">
+        Front-End &amp; Mobile Developer with 4.3+ years shipping secure, cross-platform
+        mobile banking apps for UK Building Societies — biometric login, OTA releases,
+        QR authentication, and compliance baked in from the first commit.
+      </p>
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--primary">Get in touch</a>
+        <a href="#experience" class="btn btn--outline">See the work</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num">4</span>
+          <span class="hero__stat-label">Banking apps<br>shipped to App Store</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">4.3+</span>
+          <span class="hero__stat-label">Years building<br>fintech products</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">UK</span>
+          <span class="hero__stat-label">Financial institutions<br>as end clients</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="phone">
+        <div class="phone__notch"></div>
+        <div class="phone__screen">
+          <div class="app__header">
+            <span class="app__bank">Meridian&nbsp;Building&nbsp;Society</span>
+            <span class="app__lock" id="lockIcon">🔒</span>
+          </div>
+
+          <div class="app__stage" id="appStage">
+            <!-- Step 1: biometric prompt -->
+            <div class="app__step app__step--auth" id="stepAuth">
+              <div class="scan">
+                <svg class="scan__ring" viewBox="0 0 120 120">
+                  <circle class="scan__ring-bg" cx="60" cy="60" r="52"></circle>
+                  <circle class="scan__ring-fg" id="scanRing" cx="60" cy="60" r="52"></circle>
+                </svg>
+                <svg class="scan__print" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2a7 7 0 0 0-7 7c0 3.5 1.5 5.7 2.3 7.1M12 2a7 7 0 0 1 7 7c0 1.2-.1 2.2-.3 3.1M12 6a5 5 0 0 0-5 5c0 2.6.9 4.2 1.7 5.5M12 6a5 5 0 0 1 5 5c0 .8 0 1.6-.2 2.4M9 21c-.6-1-1-1.8-1.3-2.6M12 10a3 3 0 0 0-3 3c0 2.7 1.2 4.4 2.6 6.8M12 10a3 3 0 0 1 3 3c0 .6 0 1.1-.1 1.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <p class="scan__label" id="scanLabel">Touch sensor to sign in</p>
+            </div>
+
+            <!-- Step 2: balance reveal -->
+            <div class="app__step app__step--balance" id="stepBalance">
+              <p class="bal__greeting">Good afternoon, Alex</p>
+              <div class="bal__card">
+                <div class="bal__card-row">
+                  <span>Current Account</span>
+                  <span class="bal__dots">•••• 4471</span>
+                </div>
+                <span class="bal__amount">£4,286.10</span>
+              </div>
+              <div class="bal__list">
+                <div class="bal__row"><span>Mortgage balance</span><span>£128,940.02</span></div>
+                <div class="bal__row"><span>Savings ISA</span><span>£9,412.55</span></div>
+              </div>
+              <div class="bal__ota">
+                <span class="bal__ota-dot"></span> OTA update installed — v4.2.1
+              </div>
+            </div>
+          </div>
+
+          <div class="app__tabbar">
+            <span class="app__tab app__tab--active">Home</span>
+            <span class="app__tab">Pay</span>
+            <span class="app__tab">Statements</span>
+            <span class="app__tab">More</span>
+          </div>
+        </div>
+      </div>
+      <p class="hero__visual-caption">A biometric login flow like the ones shipped for Bath, Monmouthshire, Earl Shilton &amp; Harpenden Building Societies</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUMMARY ============ -->
+<section class="section" id="summary">
+  <div class="section__inner">
+    <p class="section__eyebrow">01 — Summary</p>
+    <h2 class="section__title">Fintech front ends, built for real regulation.</h2>
+    <p class="section__lead">
+      I build web and cross-platform mobile banking applications for UK financial institutions —
+      the kind of software that has to be fast, accessible, and defensible in an audit. My toolkit
+      is Angular, Ionic, Capacitor, TypeScript and JavaScript, applied to problems like biometric
+      authentication, over-the-air releases, QR-based multi-device login and running several bank
+      clients from one consolidated codebase without duplicating logic.
+    </p>
+
+    <div class="achieve">
+      <div class="achieve__item">
+        <span class="achieve__icon">🏦</span>
+        <p>Delivered <strong>4 production mobile banking apps</strong> for UK Building Societies — Bath, Monmouthshire, Earl Shilton and Harpenden — end to end, from development to App Store release.</p>
+      </div>
+      <div class="achieve__item">
+        <span class="achieve__icon">🧩</span>
+        <p>Engineered a <strong>consolidated multi-client codebase</strong> architecture, cutting onboarding time for new banking clients and minimising code duplication.</p>
+      </div>
+      <div class="achieve__item">
+        <span class="achieve__icon">🛡️</span>
+        <p>Implemented <strong>biometric/PIN login, jailbreak/root detection and ProGuard obfuscation</strong> to meet UK financial-services security requirements.</p>
+      </div>
+      <div class="achieve__item">
+        <span class="achieve__icon">⚡</span>
+        <p>Integrated <strong>OTA updates via Capacitor Updater</strong>, shipping live code changes without waiting on full App Store review cycles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section section--soft" id="skills">
+  <div class="section__inner">
+    <p class="section__eyebrow">02 — Skills</p>
+    <h2 class="section__title">Core stack.</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <p class="skill-card__label">Mobile</p>
+        <div class="tags">
+          <span class="tag">Ionic 6 / 7</span><span class="tag">Capacitor</span>
+          <span class="tag">iOS</span><span class="tag">Android</span>
+          <span class="tag">Cross-platform</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-card__label">Frontend</p>
+        <div class="tags">
+          <span class="tag">Angular 8–20+</span><span class="tag">HTML5</span>
+          <span class="tag">CSS3</span><span class="tag">Angular Material</span>
+          <span class="tag">Standalone Components</span><span class="tag">Signals</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-card__label">Languages</p>
+        <div class="tags">
+          <span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Core Java</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-card__label">Fintech Domain</p>
+        <div class="tags">
+          <span class="tag">UK Mobile Banking Apps</span><span class="tag">Biometric Auth</span>
+          <span class="tag">OTA Updates</span><span class="tag">QR Login</span>
+          <span class="tag">Force Update</span><span class="tag">Compliance</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-card__label">Firebase</p>
+        <div class="tags">
+          <span class="tag">App Analytics</span><span class="tag">Push Notifications</span><span class="tag">Firebase Integration</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-card__label">Tools / Cloud</p>
+        <div class="tags">
+          <span class="tag">VS Code</span><span class="tag">Xcode</span><span class="tag">Android Studio</span>
+          <span class="tag">GitHub</span><span class="tag">BitBucket</span><span class="tag">AWS EC2</span>
+          <span class="tag">Chrome DevTools</span>
+        </div>
+      </div>
+      <div class="skill-card skill-card--wide">
+        <p class="skill-card__label">AI-Assisted Development</p>
+        <div class="tags">
+          <span class="tag tag--accent">ChatGPT</span><span class="tag tag--accent">Claude AI</span>
+          <span class="tag">Prompt Engineering for dev workflows</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section" id="projects">
+  <div class="section__inner">
+    <p class="section__eyebrow">03 — Projects</p>
+    <h2 class="section__title">Selected work.</h2>
+    <p class="section__lead">Nine shipped products across UK fintech, legal tech and edtech. Filter by domain.</p>
+
+    <div class="filter-bar" role="tablist" aria-label="Filter projects by category">
+      <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+      <button class="filter-btn" data-filter="fintech" role="tab" aria-selected="false">Banking &amp; Fintech</button>
+      <button class="filter-btn" data-filter="other" role="tab" aria-selected="false">Other Work</button>
+    </div>
+
+    <div class="pgrid" id="projectGrid">
+
+      <article class="pcard" data-cat="fintech">
+        <div class="pcard__top">
+          <span class="pcard__icon">🏦</span>
+          <span class="pcard__badge">Mobile Banking</span>
+        </div>
+        <h3 class="pcard__title">Bath Building Society</h3>
+        <p class="pcard__role">Ionic 6 · Angular 19 · Capacitor · iOS &amp; Android</p>
+        <p class="pcard__desc">Full-featured mobile banking app with biometric/PIN login, account statements, transaction history and mortgage balance views.</p>
+        <ul class="pcard__list">
+          <li>Force Update mechanism blocks outdated, non-compliant versions</li>
+          <li>Firebase Push Notifications &amp; App Analytics for engagement</li>
+        </ul>
+        <div class="pcard__tags"><span>Biometric Auth</span><span>Firebase</span><span>iOS/Android</span></div>
+      </article>
+
+      <article class="pcard" data-cat="fintech">
+        <div class="pcard__top">
+          <span class="pcard__icon">🔐</span>
+          <span class="pcard__badge">Mobile Banking</span>
+        </div>
+        <h3 class="pcard__title">Monmouthshire Building Society</h3>
+        <p class="pcard__role">Ionic 7 · Angular · Capacitor</p>
+        <p class="pcard__desc">Cross-platform banking solution with secure savings/mortgage access, biometric sign-in, digital statements and real-time transaction views.</p>
+        <ul class="pcard__list">
+          <li>QR Login — secure multi-device authentication via QR scan from an active session</li>
+        </ul>
+        <div class="pcard__tags"><span>QR Login</span><span>Multi-Device Auth</span><span>Capacitor</span></div>
+      </article>
+
+      <article class="pcard" data-cat="fintech">
+        <div class="pcard__top">
+          <span class="pcard__icon">📊</span>
+          <span class="pcard__badge">Mobile Banking</span>
+        </div>
+        <h3 class="pcard__title">Earl Shilton Building Society</h3>
+        <p class="pcard__role">Ionic · Angular · Capacitor</p>
+        <p class="pcard__desc">Feature-rich cross-platform banking application built on the same secure architecture shared across all UK building society clients.</p>
+        <ul class="pcard__list">
+          <li>RxJS and Angular services for efficient state management and real-time UI updates</li>
+        </ul>
+        <div class="pcard__tags"><span>RxJS</span><span>State Management</span></div>
+      </article>
+
+      <article class="pcard" data-cat="fintech">
+        <div class="pcard__top">
+          <span class="pcard__icon">💳</span>
+          <span class="pcard__badge">Mobile Banking</span>
+        </div>
+        <h3 class="pcard__title">Harpenden Building Society</h3>
+        <p class="pcard__role">Ionic · Angular · Capacitor</p>
+        <p class="pcard__desc">Full mobile banking functionality — secure login, account management and transaction features tailored to Harpenden's requirements.</p>
+        <ul class="pcard__list">
+          <li>Built on the shared consolidated-codebase architecture for faster delivery</li>
+        </ul>
+        <div class="pcard__tags"><span>Secure Login</span><span>Account Mgmt</span></div>
+      </article>
+
+      <article class="pcard" data-cat="fintech">
+        <div class="pcard__top">
+          <span class="pcard__icon">🖥️</span>
+          <span class="pcard__badge">Desktop Banking</span>
+        </div>
+        <h3 class="pcard__title">Teller — Branch Desktop App</h3>
+        <p class="pcard__role">Electron · Angular · TypeScript</p>
+        <p class="pcard__desc">Desktop banking application for branch staff supporting float management, passbook printing, cheque printing and customer transactions.</p>
+        <ul class="pcard__list">
+          <li>Built for in-branch staff workflows rather than end customers</li>
+        </ul>
+        <div class="pcard__tags"><span>Electron</span><span>Branch Ops</span></div>
+      </article>
+
+      <article class="pcard" data-cat="other">
+        <div class="pcard__top">
+          <span class="pcard__icon">⚖️</span>
+          <span class="pcard__badge">Legal Tech</span>
+        </div>
+        <h3 class="pcard__title">Roznama</h3>
+        <p class="pcard__role">Angular · TypeScript</p>
+        <p class="pcard__desc">Litigation management platform for legal departments to track, manage and report on litigation and arbitration matters — a centralised document repository.</p>
+        <div class="pcard__tags"><span>Legal Ops</span><span>Document Repository</span></div>
+      </article>
+
+      <article class="pcard" data-cat="other">
+        <div class="pcard__top">
+          <span class="pcard__icon">🎓</span>
+          <span class="pcard__badge">Career Platform</span>
+        </div>
+        <h3 class="pcard__title">Career and Paths</h3>
+        <p class="pcard__role">Angular · Ionic</p>
+        <p class="pcard__desc">Career-exploration platform helping parents and children discover and plan career options globally.</p>
+        <div class="pcard__tags"><span>Ionic</span><span>Global Audience</span></div>
+      </article>
+
+      <article class="pcard" data-cat="other">
+        <div class="pcard__top">
+          <span class="pcard__icon">📋</span>
+          <span class="pcard__badge">Legal Tech</span>
+        </div>
+        <h3 class="pcard__title">Legatrix</h3>
+        <p class="pcard__role">Angular</p>
+        <p class="pcard__desc">Legal compliance tool with dashboards for management visibility and a compliance matrix mapped across laws and regulations.</p>
+        <div class="pcard__tags"><span>Dashboards</span><span>Compliance Matrix</span></div>
+      </article>
+
+      <article class="pcard" data-cat="other">
+        <div class="pcard__top">
+          <span class="pcard__icon">📚</span>
+          <span class="pcard__badge">EdTech</span>
+        </div>
+        <h3 class="pcard__title">Marathi Digi Madhyam</h3>
+        <p class="pcard__role">Android · Ionic</p>
+        <p class="pcard__desc">Mobile Android application delivering syllabus content for students from Class 1 to Class 10.</p>
+        <div class="pcard__tags"><span>Android</span><span>Education</span></div>
+      </article>
+
+    </div>
+    <p class="pgrid__note">Client work under NDA — case studies describe scope and my contribution rather than linking to production banking apps.</p>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section" id="experience">
+  <div class="section__inner">
+    <p class="section__eyebrow">04 — Experience</p>
+    <h2 class="section__title">Where the apps got built.</h2>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-item__rail">
+          <span class="tl-item__dot"></span>
+          <span class="tl-item__line"></span>
+        </div>
+        <div class="tl-item__body">
+          <div class="tl-item__head">
+            <h3>Angular / Mobile Developer</h3>
+            <span class="tl-item__date">Jun 2024 — Present</span>
+          </div>
+          <p class="tl-item__org">Consectus (India) Pvt. Ltd. · UK Fintech — Mobile Banking Applications for Building Societies</p>
+
+          <div class="proj-grid">
+            <div class="proj-card">
+              <p class="proj-card__name">Bath Building Society</p>
+              <p class="proj-card__stack">Ionic 6 · Angular 19 · Capacitor · iOS &amp; Android</p>
+              <ul>
+                <li>Full-featured banking app: biometric/PIN login, account statements, transaction history, mortgage balance views.</li>
+                <li>Force Update mechanism to block outdated, non-compliant app versions.</li>
+                <li>Firebase Push Notifications and App Analytics for engagement and monitoring.</li>
+              </ul>
+            </div>
+            <div class="proj-card">
+              <p class="proj-card__name">Monmouthshire Building Society</p>
+              <p class="proj-card__stack">Ionic 7 · Angular · Capacitor</p>
+              <ul>
+                <li>Cross-platform banking app with secure savings/mortgage access and digital statements.</li>
+                <li>QR Login / multi-device login — secure authentication across devices via QR scan from an active session.</li>
+              </ul>
+            </div>
+            <div class="proj-card">
+              <p class="proj-card__name">Earl Shilton Building Society</p>
+              <p class="proj-card__stack">Ionic · Angular · Capacitor</p>
+              <ul>
+                <li>Feature-rich cross-platform banking app on the same secure architecture used across all clients.</li>
+                <li>RxJS and Angular services for efficient state management and real-time UI updates.</li>
+              </ul>
+            </div>
+            <div class="proj-card">
+              <p class="proj-card__name">Harpenden Building Society</p>
+              <p class="proj-card__stack">Ionic · Angular · Capacitor</p>
+              <ul>
+                <li>Full mobile banking functionality — secure login, account management, transaction features tailored to Harpenden's requirements.</li>
+              </ul>
+            </div>
+            <div class="proj-card">
+              <p class="proj-card__name">Teller — Desktop Banking App</p>
+              <p class="proj-card__stack">Electron · Angular · TypeScript</p>
+              <ul>
+                <li>Branch-staff desktop app: float management, passbook printing, cheque printing, customer transaction operations.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="platform-card">
+            <p class="platform-card__title">Shared platform &amp; architecture</p>
+            <ul class="platform-card__list">
+              <li>Consolidated project setup — one shared codebase powering every client app, minimising duplication.</li>
+              <li>OTA updates via Capacitor Updater — live code pushes without full App Store release cycles.</li>
+              <li>Jailbreak / root detection to block access from compromised devices.</li>
+              <li>16KB APK page alignment for Android 15+ compatibility; optimised ProGuard rules for production builds.</li>
+              <li>Angular 20+ with standalone components, signals-based reactivity, and an improved build pipeline.</li>
+              <li>Close collaboration with backend and QA teams to meet UK financial regulations on every release.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-item__rail">
+          <span class="tl-item__dot"></span>
+          <span class="tl-item__line tl-item__line--last"></span>
+        </div>
+        <div class="tl-item__body">
+          <div class="tl-item__head">
+            <h3>Front-End Developer</h3>
+            <span class="tl-item__date">Jun 2022 — May 2024</span>
+          </div>
+          <p class="tl-item__org">Predict Solutions</p>
+
+          <div class="proj-grid">
+            <div class="proj-card">
+              <p class="proj-card__name">Roznama</p>
+              <p class="proj-card__stack">Angular · TypeScript · Litigation Management</p>
+              <ul>
+                <li>Enhanced a litigation management platform for legal departments to track, manage and report on litigation and arbitration matters as a centralised document repository.</li>
+              </ul>
+            </div>
+            <div class="proj-card">
+              <p class="proj-card__name">Career and Paths</p>
+              <p class="proj-card__stack">Angular · Ionic</p>
+              <ul>
+                <li>Expanded a career-exploration platform helping parents and children plan career options globally.</li>
+              </ul>
+            </div>
+            <div class="proj-card">
+              <p class="proj-card__name">Legatrix</p>
+              <p class="proj-card__stack">Angular · Legal Compliance</p>
+              <ul>
+                <li>Built management dashboards and a compliance matrix across laws and regulations.</li>
+              </ul>
+            </div>
+            <div class="proj-card">
+              <p class="proj-card__name">Marathi Digi Madhyam</p>
+              <p class="proj-card__stack">Android · Ionic</p>
+              <ul>
+                <li>Improved a mobile app delivering syllabus content for students from Class 1 to Class 10.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tl-item__note">Participated in SCRUM ceremonies, ensured cross-browser compatibility across Chrome, Firefox, Safari and IE, and gained hands-on experience with AWS EC2 for deployment and cloud hosting.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section class="section section--soft" id="education">
+  <div class="section__inner">
+    <p class="section__eyebrow">05 — Education</p>
+    <h2 class="section__title">Foundation.</h2>
+
+    <div class="edu-grid">
+      <div class="edu-card">
+        <p class="edu-card__date">2019 — 2022</p>
+        <h3>Bachelor's Degree in Electrical Engineering</h3>
+        <p class="edu-card__place">P.R. Pote College of Engineering and Management, Amravati</p>
+      </div>
+      <div class="edu-card">
+        <p class="edu-card__date">2016 — 2019</p>
+        <h3>Diploma in Electrical Engineering</h3>
+        <p class="edu-card__place">P.R. Pote (Patil) Institute of Polytechnic and Technology, Amravati</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+  <div class="section__inner">
+    <p class="section__eyebrow">06 — Contact</p>
+    <h2 class="section__title">Let's build something secure.</h2>
+    <p class="section__lead">Open to Front-End and Mobile Developer roles in fintech and beyond. Reach out directly — I reply fast.</p>
+
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:prathameshumap007@gmail.com">
+        <span class="contact-card__label">Email</span>
+        <span class="contact-card__value">prathameshumap007@gmail.com</span>
+      </a>
+      <a class="contact-card" href="tel:+919096220217">
+        <span class="contact-card__label">Phone</span>
+        <span class="contact-card__value">+91 90962 20217</span>
+      </a>
+      <div class="contact-card contact-card--static">
+        <span class="contact-card__label">Location</span>
+        <span class="contact-card__value">Navi Mumbai, India</span>
+      </div>
+      <div class="contact-card contact-card--static">
+        <span class="contact-card__label">Languages</span>
+        <span class="contact-card__value">English · Hindi · Marathi</span>
+      </div>
+    </div>
+
+    <a href="assets/Prathamesh_Umap_Resume.pdf" download class="btn btn--primary contact__download">Download Full Résumé (PDF)</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Prathamesh Umap — Front-End &amp; Mobile Developer, Fintech Specialist.</p>
+  <p class="footer__addr">104, Gangasagar, Sector 20, Ghansoli, Navi Mumbai – 400701</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
